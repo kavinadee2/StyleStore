@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleStore | Clothing Shop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>StyleStore</h1>
+        <p>Your style, your choice.</p>
+    </header>
+
+    <main>
+        <h2>Welcome to StyleStore!</h2>
+        <p>Your mini online clothing shop starts here.</p>
+        <button id="shopButton">Explore Our Shop</button>
+        <p id="message"></p>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
