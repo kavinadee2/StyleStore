@@ -1,12 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StyleStore | Clothing Shop</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>StyleStore</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <header>
         <h1>StyleStore</h1>
@@ -14,12 +16,29 @@
     </header>
 
     <main>
-        <h2>Welcome to StyleStore!</h2>
-        <p>Your mini online clothing shop starts here.</p>
-        <button id="shopButton">Explore Our Shop</button>
-        <p id="message"></p>
-    </main>
+        <h2>Our Clothing Collection</h2>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+        <div class="products">
+
+            {% for product in products %}
+
+            <div class="product-card">
+                <h3>{{ product.name }}</h3>
+
+                <p>{{ product.description }}</p>
+
+                <h4>Rs. {{ product.price }}</h4>
+
+                <p>Category: {{ product.category }}</p>
+
+                <p>Stock: {{ product.stock }}</p>
+
+                <button>Add to Cart</button>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </main>
 </body>
 </html>
