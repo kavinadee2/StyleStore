@@ -14,20 +14,34 @@ header {
 }
 
 main {
+    padding: 30px;
     text-align: center;
-    margin: 80px auto;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: white;
     padding: 20px;
+    width: 230px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccc;
 }
 
 button {
     background-color: #222;
     color: white;
-    padding: 12px 24px;
     border: none;
+    padding: 12px 20px;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #444;
+    background-color: #555;
 }
